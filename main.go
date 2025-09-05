@@ -17,7 +17,7 @@ func main() {
 		port = "8080"
 	}
 	k := kb.New()
-	aiClient := ai.NewSimulated()
+	aiClient := ai.NewOpenAIClient("", "gpt-4o-mini")
 	st := store.NewInMemoryStore()
 
 	h := api.NewHandler(k, aiClient, st)
